@@ -1,0 +1,137 @@
+.page-footer {
+  padding: 60px 0;
+  background-color: var(--bg-color-dark);
+
+  &__container {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+  }
+  &__logoandsocial-wrap {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 89px 0 76px;
+      margin-bottom: 60px;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 93px;
+      padding: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__wrap {
+    text-align: center;
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 0px;
+    }
+    @include desktop {
+      text-align: start;
+  }
+  }
+  
+  & .logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-contacts {
+  &__item {
+    margin-bottom: 9px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: var(--footer-text-color);
+    transition: color var(--hover-focus-decor-func);
+    &:hover,
+    &:focus {
+      color: var(--primary-accent-color);
+    }
+    &--map {
+      color: var(--secondary-accent-color);
+    }
+  }
+}
+
+.footer-social {
+  // margin-top: 12px;
+  text-align: center;
+  margin-bottom: 60px;
+  
+  @include tablet {
+    padding-top: 5px;
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    padding-top: 12px;
+    margin-bottom: 0px;
+    text-align: start;
+  }
+}
+
+.subscribe {
+  // margin-top: 12px;
+  text-align: center;
+
+  &__form {
+@include tablet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@include desktop {
+  display: flex;
+  flex-direction:row;
+  align-items: baseline;
+  gap: 12px;
+}
+  }
+  
+  &__email {
+    width: 100%;
+    max-width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 15px 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    color: var(--footer-text-color);
+    // margin-right: 12px;
+    transition: border-color var(--hover-focus-decor-func);
+    transition: background-color var(--hover-focus-decor-func);
+    &:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    }
+    &:focus {
+      border-color: var(--secondary-accent-color);
+      background-color: rgba(255, 255, 255, 0.1)
+    }
+    @include desktop {
+      width: 358px;
+    }
+  }
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    }
+
+  &__icon {
+    fill: var(--secondary-accent-color);
+  }
+}

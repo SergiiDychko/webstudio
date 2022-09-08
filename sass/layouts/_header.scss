@@ -1,0 +1,124 @@
+.page-header {
+  border-bottom: #ececec solid 1px;
+  
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    @include tablet {
+      height: 100%;
+      justify-content: space-between;
+
+    }
+    @include desktop {
+      height: 100%;
+    justify-content: space-between;
+
+    }
+  }
+  & .logo {
+    @include tablet {
+      margin-right: 87px;
+    }
+    @include desktop {
+      margin-right: 93px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: none;
+    align-items: center;
+    gap: 50px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      visibility: visible;
+      position: static;
+    } 
+  }
+  &__link {
+    padding: 32px 0;
+    font-weight: 500;
+    line-height: 1.14;
+    transition: color var(--hover-focus-decor-func);
+    color: var(--title-text-color);
+    
+    &:hover,
+    &:focus {
+    color: var(--primary-accent-color);
+    }
+  }
+}
+
+.nav__link--actual {
+  display: inline-block;
+  position: relative;
+  padding-right: 5px;
+  padding-left: 5px;
+  color: var(--primary-accent-color);
+  
+  &::after {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--primary-accent-color);
+  }
+}
+
+.header-contacts {
+  display: none;
+  
+  @include tablet {
+    visibility: visible;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  @include desktop {
+    visibility: visible;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+  
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+      font-size: 12px;
+    line-height: 1.14;
+    color: var(--primary-text-color);
+    transition: color var(--hover-focus-decor-func);
+    @include desktop {
+      font-size: 14px;
+    }
+    
+    &:hover,
+    &:focus {
+      color: var(--primary-accent-color);
+    }
+  }
+
+  &__icon {
+    fill: var(--primary-text-color);
+    margin-right: 10px;
+    transition: fill var(--hover-focus-decor-func);
+    .header-contacts__link:hover &,
+    .header-contacts__link:focus & {
+      fill: var(--primary-accent-color);
+    }
+  }
+}

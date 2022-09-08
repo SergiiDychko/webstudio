@@ -1,0 +1,25 @@
+.custom-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+    border: 1px solid #757575;
+    border-radius: 2px;
+    transition: background-color var(--hover-focus-decor-func);
+    transition: border var(--hover-focus-decor-func);
+    
+    &__icon {
+        fill: transparent;
+        transition: fill var(--hover-focus-decor-func);
+        
+        .custom-check__hidden-check:checked + .modal__agreement & {
+            fill: var(--secondary-accent-color);
+        }
+    }
+
+    .custom-check__hidden-check:checked + .modal__agreement & {
+        background-color: var(--primary-accent-color);
+        border: none;
+        }
+  }
